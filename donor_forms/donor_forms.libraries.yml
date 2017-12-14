@@ -1,0 +1,7 @@
+donor_forms:
+  version: 1.x
+  css:
+    theme:
+      css/donor-forms.css: {}
+  js:
+    js/donor-forms.js: {}

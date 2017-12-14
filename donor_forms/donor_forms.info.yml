@@ -1,0 +1,7 @@
+name: Custom Forms for Payments and Donations
+type: module
+description: Custom donor forms
+package: Healthgrades
+core: 8.x
+configure: donor_forms.payments_config_form
+

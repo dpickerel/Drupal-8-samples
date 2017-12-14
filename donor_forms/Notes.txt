@@ -1,0 +1,11 @@
+Hi,
+This is my first stab at D8. There are 3 user forms, 1 configuration form, in 3 blocks, and mirrored on 3 pages for testing.
+The regular Form API is used to create the form. 
+
+iATS provides an Authorize.net type of library which I interfaced to. I know SOAP, but didn't create the code in this case.
+I started with D7 Commerce Paypal Payflow gateway code and modified it to work on D8 and with no shopping cart.
+
+I didn't get the requirements for the second gateway until after I'd finished the iATS gateway. I would have created an API instead, probably with a factory pattern or at least some Interface class types.
+
+The main donor form has a number of alternate fields based on field selections. So if you are making a general donation you can later pick the department it goes to, and jQuery is used to display the new fields.
+However this made validation interesting so I needed to be able to override a number of Form settings, using a combination of hook_form and a custom validation function.

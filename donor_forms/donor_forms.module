@@ -1,0 +1,62 @@
+<?php
+/**
+ * @file
+ * Contains \Drupal\donor_forms\Controller\DonorForms.
+ */
+
+use Drupal\Core\Controller\ControllerBase;
+
+
+/**
+ * Implements hook_mail().
+ */
+function donor_forms_mail($key, &$message, $params) {
+    $options = array(
+        'langcode' => $message['langcode'],
+    );
+
+    switch ($key) {
+        case 'donor_forms':
+            $message['from'] = \Drupal::config('system.site')->get('mail');
+            $message['subject'] = t('Hospital Payment Received');
+            $message['body'][] = $params['message'];
+            break;
+    }
+}
+// DonorPhysicianPaymentBlock
+class DonorFormsController extends ControllerBase {
+    public function content() {
+        return array(
+            '#type' => 'markup',
+            '#markup' => $this->t('Hello, World!'),
+        );
+    }
+
+
+    /**
+     * Implements hook_theme().
+     */
+    function donorform1_theme($existing, $type, $theme, $path) {
+        $variables = array(
+            'donorform1' => array(
+                'variables' => array(
+                    'source_text' => NULL,
+                ),
+                'template' => 'donorform1',
+            ),
+        );
+        return $variables;
+    }
+    /**
+     * Template preprocess function for Lorem ipsum
+     *
+     * @param variables
+     *   An associative array containing:
+     *   - source_text
+     */
+    function template_preprocess_donorform1(&$variables) {
+        $punctuation = array('. ', '! ', '? ', '... ', ': ', '; ');
+
+    }
+
+}

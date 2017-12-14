@@ -1,0 +1,15 @@
+#donor-donation-block-form #edit-direct--wrapper,
+#donor-donation-block-form #edit-eft,
+#donor-donation-block-form #edit-memorial,
+#edit-honorific,
+#donor-donation-block-form  #edit-gift-info-recurring--wrapper,
+#donor-donation-block-form  #edit-recurring-info,
+#donor-donation-block-form  #edit-pledge,
+#donor-donation-block-form  #edit-eft,
+#donor-donation-block-form  #edit-target-specify {
+  display:none;
+}
+
+#donor-donation-block-form .error {
+    border: 1px solid red !important;
+}

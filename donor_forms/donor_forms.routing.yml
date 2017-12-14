@@ -1,0 +1,31 @@
+donor_forms.donation_form:
+  path: '/content/forms'
+  defaults:
+    _title: 'Donation Forms'
+    _form: '\Drupal\donor_forms\Form\DonorDonationForm'
+  requirements:
+    _permission: 'access content'
+
+donor_forms.physician_payment_form:
+  path: '/content/pay-forms'
+  defaults:
+    _title: 'Physician Payment Form'
+    _form: '\Drupal\donor_forms\Form\DonorPhysicianPaymentForm'
+  requirements:
+    _permission: 'access content'
+
+donor_forms.hospital_payment_form:
+  path: '/content/hosp-forms'
+  defaults:
+    _title: 'Payment Form'
+    _form: '\Drupal\donor_forms\Form\DonorHospitalPaymentForm'
+  requirements:
+    _permission: 'access content'
+
+donor_forms.payments_config_form:
+  path: '/admin/config/settings'
+  defaults:
+    _title: 'Payment Forms Config Settings'
+    _form: '\Drupal\donor_forms\Form\DonorSettingsForm'
+  requirements:
+    _permission: 'access content'
